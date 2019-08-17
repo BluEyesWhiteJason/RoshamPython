@@ -1,6 +1,7 @@
 import random
 
 
+
 class Player:
     def __init__(self, name):
         self.name = name
@@ -53,6 +54,38 @@ class User(Player):
         return "Jason"
 
 
+def Throw(p1, p2):
+    "Makes the player and the opponent throw"
+    print("Alright, prepare for battle...")
+    print("3...")
+    print("2...")
+    print("1...")
+    print("THROW")
+
+    urThrow = p1.ChooseThrow()
+
+    print("You chose " + urThrow)
+    print("Your opponent chose " + p2.ChooseThrow())
+
+def WinLoseDraw(Throw):
+    if p1.ChooseThrow() == p2.ChooseThrow():
+        return 2
+    
+    if urThrow is "Rock":
+        if p2.ChooseThrow() is "Scissors":
+            return 0
+        elif p2.ChooseThrow() is "Paper":
+            return 1
+    if urThrow is "Paper":
+        if p2.ChooseThrow() is "Scissors":
+            return 1
+        elif p2.ChooseThrow() is "Rock":
+            return 0
+    if urThrow is "Scissors":
+        if p2.ChooseThrow() is "Rock":
+            return 1
+        elif p2.ChooseThrow() is "Paper":
+            return 0
 
 r = Rocky("Rocky")
 rand = Rando("Randy")
@@ -82,6 +115,10 @@ while True:
     except ValueError:
         print("That's not an int")
 
+p1 = User(name)
+if num is 1:
+    p2 = Rocky("Rocky")
+elif num is 2:
+    p2 = Rando("Randy")
 
-
-
+WinLoseDraw(Throw(p1,p2)) 
