@@ -68,7 +68,7 @@ def Throw(p1, p2):
     print("Your opponent chose " + p2.ChooseThrow())
 
 def WinLoseDraw(Throw):
-    if p1.ChooseThrow() == p2.ChooseThrow():
+    if urThrow == p2.ChooseThrow():
         return 2
     
     if urThrow is "Rock":
@@ -121,4 +121,4 @@ if num is 1:
 elif num is 2:
     p2 = Rando("Randy")
 
-WinLoseDraw(Throw(p1,p2)) 
+print(WinLoseDraw(Throw(p1,p2)))
